@@ -31,6 +31,13 @@ const list = (items: string[], L: Boolean) => {
     );
   });
 };
+
+
+export { message, list };
+
+
+
+
 // const list = (items: string[], L: Boolean) => {
 //   return items.map((item, index) =>
 //     !L ? (
@@ -70,4 +77,3 @@ const list = (items: string[], L: Boolean) => {
 // };
 
 // Render the list items using map function.
-export { message, list, listL };

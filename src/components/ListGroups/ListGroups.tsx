@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 import { Fragment } from "react";
 import { MouseEvent } from "react";
-import { list, listL, message } from "../utils/ListGroupFunctions";
+import { list,  message } from "../utils/ListGroupFunctions";
 
-function ListGroups() {
-  let items = ["orange", "orange", "orange", "orange", "orange", "orange"];
+
+
+
+
+
+
+
+interface Props{
+  items:string[];
+  heading:string
+}
+
+
+
+
+function ListGroups({items,heading}:Props) {
 const [view,setView] = useState(true)
   //items =[]
   let L = view;
@@ -12,7 +26,7 @@ const [view,setView] = useState(true)
   return (
     <>
       <div className="d-flex flex-row m-3 justify-content-between">
-        <h1>List</h1>
+        <h1>{heading}</h1>
         <button onClick={()=>{
           setView(!view)
         }}>Change view</button>
